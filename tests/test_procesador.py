@@ -1,6 +1,19 @@
 import unittest
-# Importamos la clase que vamos a probar.
-# Asume que la ruta es 'src.procesador' según tu estructura de carpetas.
-from src.procesador import Analizador 
-import os 
-from typing import Dict
+from src.procesador import Analizador
+
+class TestProcesador(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.analizador = Analizador("datos/sri_ventas_2024.csv")
+
+    def test_provincia_existente(self):
+        valor = self.analizador.ventas_por_provincia("PICHINCHA")
+        self.assertGreater(valor, 0)
+
+    def test_provincia_inexistente(self):
+        with self.assertRaises(KeyError):
+            self.analizador.ventas_por_provincia("NARNIA")
+
+if __name__ == "__main__":
+    unittest.main()
