@@ -2,41 +2,41 @@
 # IGNORAR ARCHIVOS Y CARPETAS GENERADAS POR PYTHON
 # --------------------------------------------------------------------------
 
-# Entornos virtuales (el estándar)
+# Entornos virtuales
 venv/
 .venv/
 env/
 .env
 
-# Archivos de caché de Python
+# Archivos de caché
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 *$py.class
 
-# Archivos de distribución o construcción
+# Archivos de distribución
 dist/
 build/
 *.egg-info/
 
-# Logs y archivos temporales
+# Logs y temporales
 *.log
 tmp/
-.coverage  # Archivos generados por coverage.py (útil para tu Tarea Autónoma)
 
-# Archivos creados al ejecutar las pruebas
+# Archivo de coverage (pero NO la carpeta htmlcov)
+.coverage
+
+# Archivo temporal usado en pruebas
 test_data.csv 
 
 # --------------------------------------------------------------------------
-# IGNORAR ARCHIVOS GENERADOS POR VISUAL STUDIO CODE (VS CODE)
+# VISUAL STUDIO CODE
 # --------------------------------------------------------------------------
-
-# Carpeta de configuración de VS Code. Mantiene la configuración local fuera del repo.
 .vscode/
 
 # --------------------------------------------------------------------------
-# IGNORAR ARCHIVOS DEL SISTEMA OPERATIVO
+# ARCHIVOS DEL SISTEMA OPERATIVO
 # --------------------------------------------------------------------------
 
 # macOS
@@ -44,7 +44,3 @@ test_data.csv
 
 # Windows
 Thumbs.db
-
-
-
-
